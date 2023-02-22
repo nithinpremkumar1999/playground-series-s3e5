@@ -1,0 +1,39 @@
+corr(fixed_acidity, citric_acid) > 0.7 #high correlation
+corr(fixed_acidity, pH) < -0.68 #high correlation
+corr(fixed_acidity, quality) = 0.08
+corr(citric_acid, quality) = 0.14
+VIF(fixed_acidity) = 85
+VIF(citric_acid) = 8.5
+
+
+corr(pH, citric_acid) < -0.559 #high correlation
+corr(pH, quality) = 0.016
+VIF(pH) = 1098
+
+
+corr(total_sulfur_dioxide, free_sulfur_dioxide) = 0.63
+VIF(total_sulfur_dioxide) ~ VIF(free_sulfur_dioxide)
+corr(free_sulfur_dioxide, quality) = -0.057
+corr(total_sulfur_dioxide, quality) = -0.22
+
+
+VIF(volatile_acidity) > VIF(citric_acid)
+corr(volatile_acidity, quality) = -0.21
+corr(volatile_acidity, citric_acid) = -0.57
+
+
+**PCA(volatile_acidity, citric_acid) into 2 PCA components**
+**PCA(fixed_acidity, pH, density) into 2 PCA components**
+**PCA(free_sulfur_dioxide, total_sulfur_dioxide) into 1 PCA component**
+
+
+
+###FINAL
+1. Drop fixed_acidity
+2. Drop free_sulfur_dioxide
+3. Drop pH
+4. Drop chlorides
+5. Drop residual_sugar
+
+6. PCA(alcohol, sulphates)
+7. PCA(total_sulfur_dioxide, volatile_acidity, density)

@@ -1,0 +1,5 @@
+model 1: logisticregression; Score: 0.42, Private score: 0.35062
+model 2: KNearestNeighbors; Score: 0.38609, Private score: 0.30008
+model 3: BalancedBaggingClassifier-DecisionTree; Score: 0.37065, Private score: 0.39908
+model 4: BalancedBaggingClassifier-logisticregression; Score: 0.37117, Private score: 0.35687
+model 5: BalancedRandomForestClassifier; Score: 0.33673, Private score: 0.31198
